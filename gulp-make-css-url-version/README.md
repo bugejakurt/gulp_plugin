@@ -5,13 +5,13 @@ a plugin for gulp.js to replace version for images in css files,the version shou
 ## Installation
 
 ```bash
-npm install gulp-make-css-url-version
+npm install stitch-gulp-make-css-url-version
 ```
 
 ## Usage
 
 ```js
-var makeUrlVer = require('gulp-make-css-url-version');
+var makeUrlVer = require('stitch-gulp-make-css-url-version');
 
 gulp.task('stylesheets', function() {
     gulp.src('css/*.css')
@@ -25,7 +25,7 @@ gulp.task('stylesheets', function() {
 useDate :make version with time stamp
 
 ```js
-var makeUrlVer = require('gulp-make-css-url-version');
+var makeUrlVer = require('stitch-gulp-make-css-url-version');
 
 gulp.task('stylesheets', function() {
     gulp.src('css/*.css')
@@ -37,7 +37,7 @@ gulp.task('stylesheets', function() {
 assetsDir: specify the public directory for correct MD5 calculation in some specific cases
 
 ```js
-var makeUrlVer = require('gulp-make-css-url-version');
+var makeUrlVer = require('stitch-gulp-make-css-url-version');
 
 gulp.task('stylesheets', function() {
     gulp.src('css/*.css')
