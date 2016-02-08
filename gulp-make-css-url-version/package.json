@@ -1,6 +1,6 @@
 {
   "name": "stitch-gulp-make-css-url-version",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "replace version for images in css files",
   "license": "MIT",
   "repository": {
