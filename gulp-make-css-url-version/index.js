@@ -16,6 +16,13 @@ var getMD5 = function (data) {
     return md5Base64;
 };
 
+function sha1(data) {
+
+	return crypto.createHash('md5')
+		.update(data)
+		.digest('hex').slice(-7);
+}
+
 var formatDate = function (format, date) {
     date = date || new Date();
     var o = {
@@ -98,7 +105,7 @@ module.exports = function (options) {
             var promise = readFile(imageFilePath)
                 .then(function (data) {
                     //gutil.log('replacing image ' + imageFilePath + ' version in css file: ' + file.path);
-                    var verStr = data ? encodeURIComponent(getMD5(data.toString())) : formatDate(format);
+                    var verStr = data ? encodeURIComponent(sha1(data.toString())) : formatDate(format);
                     return {
                         key: tempKey,
                         value: "url(" + url + "?v=" + verStr + ")"
