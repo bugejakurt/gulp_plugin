@@ -110,13 +110,14 @@ module.exports = function (options) {
                         key: tempKey,
                         value: "url(" + url + "?v=" + verStr + ")"
                     };
-                }, function (e) {
-                    gutil.log(e);
-                    return {
-                        key: tempKey,
-                        value: "url(" + url + "?v=" + formatDate(format) + ")"
-                    };
                 });
+                // , function (e) {
+                //     gutil.log(e);
+                //     return {
+                //         key: tempKey,
+                //         value: "url(" + url + "?v=" + formatDate(format) + ")"
+                //     };
+                // });
 
             promises.push(promise);
 
