@@ -111,8 +111,7 @@ module.exports = function (options) {
                         value: "url(" + url + "?v=" + verStr + ")"
                     };
                 }, function (e) {
-                    if (e.code != "ENOENT")
-                        gutil.log(e);
+                    gutil.log(e);
                     return {
                         key: tempKey,
                         value: "url(" + url + "?)"
